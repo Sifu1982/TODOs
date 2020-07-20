@@ -1,0 +1,14 @@
+header section article:first-child {
+    height: 100px;
+    background-color: lightgrey;
+    border-top: 4px solid black;
+    margin-top: 5px;
+    padding: 30px;
+}
+
+header section article:last-child {
+    height: 65px;
+    background-color: black;
+    border-top: 4px solid black;
+    padding: 10px;
+}
