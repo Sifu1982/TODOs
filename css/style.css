@@ -1,14 +1,68 @@
+/*Header*/
+
+/* Fondo gris primer article */
+
 header section article:first-child {
-    height: 100px;
     background-color: lightgrey;
     border-top: 4px solid black;
     margin-top: 5px;
-    padding: 30px;
+    padding: 10px 0 0 10px;
 }
 
+/* Botón guardar en mobile design*/
+
+@media(max-width: 768px) {
+    header section article div div button {
+        margin-top: 25px;
+        margin-bottom: 25px;
+    }
+}
+
+/* Fondo negro segundo article*/
+
 header section article:last-child {
-    height: 65px;
     background-color: black;
     border-top: 4px solid black;
-    padding: 10px;
+    padding: 10px 0 0 10px;
+}
+
+/*Main*/
+
+main {
+    background-color: grey;
+    padding: 2%;
+}
+
+/*sections*/
+
+main section {
+    padding: 0 10px 0 10px;
+}
+
+main section article {
+    margin-top: 10px;
+    padding-top: 5px;
+    padding-bottom: 3px;
+    border-radius: 10px;
+}
+
+main section article:first-child {
+    margin-top: 0;
+    background-color: tomato;
+}
+
+main section article:last-child {
+    background-color: greenyellow;
+}
+
+main section article:nth-child(2) {
+    background-color: orange;
+}
+
+/* Footer */
+
+footer {
+    background-color: black;
+    color: white;
+    padding: 10px 0 0 10px;
 }
