@@ -1,12 +1,17 @@
-/*Header*/
+body {
+    padding: 0px 40px;
+    background-color: lightslategrey;
+}
 
-/* Fondo gris primer article */
+/*header*/
 
-header section article:first-child {
+header section article {
     background-color: lightgrey;
-    border-top: 4px solid black;
-    margin-top: 5px;
+    border: 4px solid brown;
     padding: 10px 0 0 10px;
+    position: relative;
+    top: 20px;
+    border-radius: 10px;
 }
 
 /* Botón guardar en mobile design*/
@@ -16,21 +21,34 @@ header section article:first-child {
         margin-top: 25px;
         margin-bottom: 25px;
     }
+    header section article {
+        padding-right: 10px;
+    }
 }
 
-/* Fondo negro segundo article*/
-
-header section article:last-child {
-    background-color: black;
-    border-top: 4px solid black;
-    padding: 10px 0 0 10px;
-}
+/*fin header*/
 
 /*Main*/
 
+/* Tarea / Tarea a buscar en mobile design */
+
+@media(max-width: 768px) {
+    main section article:first-child div div.col-12 {
+        margin-bottom: 20px;
+    }
+    main section article:first-child div div:last-child.col-12 {
+        margin-bottom: 0px;
+    }
+}
+
 main {
     background-color: grey;
-    padding: 2%;
+    padding: 30px;
+    height: 90vh;
+    border: 4px solid lightgreen;
+    position: relative;
+    top: 40px;
+    border-radius: 10px;
 }
 
 /*sections*/
@@ -47,8 +65,15 @@ main section article {
 }
 
 main section article:first-child {
-    margin-top: 0;
-    background-color: tomato;
+    background-color: black;
+    border: 4px solid black;
+    padding: 10px 10px 0 10px;
+    background-color: lightgrey;
+    position: relative;
+    left: -10px;
+    margin: 40px;
+    margin-top: 15px;
+    box-shadow: 10px 20px black;
 }
 
 main section article:last-child {
@@ -56,13 +81,56 @@ main section article:last-child {
 }
 
 main section article:nth-child(2) {
-    background-color: orange;
+    background-color: tomato;
 }
 
-/* Footer */
+main section article:nth-child(3) {
+    background-color: lightsteelblue;
+}
+
+main section article div p {
+    display: block;
+    position: relative;
+    top: 5px;
+    font-weight: 900;
+}
+
+/* Boton Eliminar */
+
+main section article div button.btn {
+    position: absolute;
+    right: 20px;
+    display: block;
+}
+
+/* Sombras de los botones en mobile design */
+
+@media(max-width: 768px) {
+    main section article div button.btn {
+        box-shadow: 5px 10px rgb(209, 146, 156);
+    }
+}
+
+/* Botón Eliminar en mobile design*/
+
+@media(max-width: 768px) {
+    main section article div button.btn {
+        position: relative;
+        left: 10px;
+        margin-bottom: 15px;
+    }
+}
+
+/* fin main */
+
+/* footer */
 
 footer {
     background-color: black;
     color: white;
     padding: 10px 0 0 10px;
+    border-top: 4px solid lightgreen;
+    text-align: center;
 }
+
+/* fin footer */
