@@ -8,7 +8,7 @@ body {
 header section article {
     background-color: lightgrey;
     border: 4px solid brown;
-    padding: 10px 0 0 10px;
+    padding: 10px 10px 0 10px;
     position: relative;
     top: 20px;
     border-radius: 10px;
@@ -17,7 +17,7 @@ header section article {
 /* Botón guardar en mobile design*/
 
 @media(max-width: 768px) {
-    header section article div div button {
+    header section article div div input {
         margin-top: 25px;
         margin-bottom: 25px;
     }
@@ -64,7 +64,7 @@ main section article {
     border-radius: 10px;
 }
 
-main section article:first-child {
+main section article:nth-child(1) {
     background-color: black;
     border: 4px solid black;
     padding: 10px 10px 0 10px;
@@ -76,16 +76,16 @@ main section article:first-child {
     box-shadow: 10px 20px black;
 }
 
-main section article:last-child {
-    background-color: greenyellow;
-}
-
 main section article:nth-child(2) {
     background-color: tomato;
 }
 
 main section article:nth-child(3) {
     background-color: lightsteelblue;
+}
+
+main section article:nth-child(4) {
+    background-color: greenyellow;
 }
 
 main section article div p {

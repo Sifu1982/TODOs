@@ -18,18 +18,18 @@
                 <div class="row">
                     <div class="col-12 col-md-4">
                         <div class="input-group mb-3">
-                            <input type="text" class="form-control" placeholder="Introduce una tarea">
+                            <input type="text" class="form-control" placeholder="Introduce una tarea" id="textoTarea">
                         </div>
                     </div>
                     <div class="col-12 col-md-4">
-                        <select class="custom-select">
-                            <option value="1">Diaria</option>
-                            <option value="2">Mensual</option>
-                            <option value="3">Urgente</option>
+                        <select id="tipoTarea" class="custom-select">
+                            <option value="Diaria">Diaria</option>
+                            <option value="Mensual">Mensual</option>
+                            <option value="Urgente">Urgente</option>
                         </select>
                     </div>
                     <div class="col-12 col-md-4">
-                        <button type="button" class="btn btn-success">Guardar</button>
+                        <input id="guardar" class="btn btn-success btn-block" type="submit" value="Guardar">
                     </div>
                 </div>
             </article>
@@ -41,9 +41,9 @@
                 <div class="row">
                     <div class="col-12 col-md-6">
                         <select class="custom-select">
-                            <option value="1">Diaria</option>
-                            <option value="2">Mensual</option>
-                            <option value="3">Urgente</option>
+                            <option value="Diaria">Diaria</option>
+                            <option value="Mensual">Mensual</option>
+                            <option value="Urgente">Urgente</option>
                         </select>
                     </div>
                     <div class="col-12 col-md-6">
@@ -53,15 +53,15 @@
                     </div>
                 </div>
             </article>
-            <article class="row">
-                <div class="col-12 col-md-10">
+            <article class="row tareas">
+                <!-- <div class="col-12 col-md-10">
                     <p>Estudiar Javascript</p>
                 </div>
                 <div class="col-12 col-md-2">
                     <button type="button" class="btn btn-danger">Eliminar</button>
-                </div>
+                </div> -->
             </article>
-            <article class="row">
+            <!-- <article class="row">
                 <div class="col-12 col-md-10">
                     <p>Dormir</p>
                 </div>
@@ -76,7 +76,7 @@
                 <div class="col-12 col-md-2">
                     <button type="button" class="btn btn-danger">Eliminar</button>
                 </div>
-            </article>
+            </article> -->
         </section>
     </main>
     <footer class="fixed-bottom">
@@ -88,8 +88,7 @@
 
 
 
-    <script src="js/funciones.js"></script>
-    <script src="js/eventos.js"></script>
+
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>
@@ -99,6 +98,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
         integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
         crossorigin="anonymous"></script>
+    <script src="js/funciones.js"></script>
+    <script src="js/eventos.js"></script>
 </body>
 
 </html>
