@@ -1,75 +1,44 @@
-let btnGuardar = document.getElementById('guardar');
 let inputTarea = document.getElementById('textoTarea');
-let selecTarea = document.getElementById('tipoTarea');
-let contadorTareas = 2;
+let selectTarea = document.getElementById('tipoTarea');
+let btnAniadir = document.getElementById('aniadir');
+let filtroXPrioridad = document.getElementById('filtroPrioridad');
+let filtroXTarea = document.getElementById('filtroTarea');
 
-let newTarea = document.querySelector('.tareas');
+inputTarea.value = '';
+inputTarea.focus();
+selectTarea.value = '';
+filtroXPrioridad.value = '';
+filtroXTarea.value = '';
 
-//Evento de introducir una tarea
-btnGuardar.addEventListener('click', capturarDatosTarea);
+btnAniadir.addEventListener('click', capturarAniadir);
 
-function capturarDatosTarea(event) {
-    event.preventDefault();
+function capturarAniadir() {
+    let texto = inputTarea.value;
+    let prioridad = selectTarea.value;
+    if (texto != '' && prioridad != '') {
+        guardarTarea(listaTareas, texto, prioridad);
+        pintarTareas(listaTareas);
+    };
+};
 
-    let tarea = inputTarea.value;
-    let tareaSeleccionada = selecTarea.value;
+filtroXPrioridad.addEventListener('change', capturarFiltroXPrioridad);
 
-    // console.log('tarea escrita: ', tarea, tareaSeleccionada);
+function capturarFiltroXPrioridad() {
+    let prioridad = filtroXPrioridad.value.toLowerCase();
+    if (prioridad == '') {
+        pintarTareas(listaTareas);
+    } else {
+        pintarTareas(filtrarXPrioridad(listaTareas, prioridad));
+    };
+};
 
-    const nuevaTarea = {
-        id: contadorTareas,
-        tarea: tarea,
-        prioridad: tareaSeleccionada
-    }
-    // console.log(nuevaTarea);
+filtroXTarea.addEventListener('input', capturarFiltroXTarea);
 
-    guardarTarea(nuevaTarea);
-
-    console.log(nuevaTarea);
-    pintarTarea(nuevaTarea);
-
-    inputTarea.value = '';
-    contadorTareas++;
-}
-
-
-function pintarTarea(pTarea) {
-    newTarea.innerHTML += `<div data-id="${pTarea.id}" id="noticia_${pTarea.id}" class="col-12 col-md-10">
-    <p>${pTarea.tarea}</p>
-</div>
-<div class="col-12 col-md-2">
-    <button onclick="borrarNoticia('noticia_${pTarea.id}')"  type="button" class="btn btn-danger">Eliminar</button>
-</div>`
-
-}
-
-function pintarTareas(pListaTareas) {
-    newTarea.innerHTML = '';
-
-    pListaTareas.forEach(pTarea => {
-        pintarTarea(pTarea);
-    });
-
-}
-
-function borrarTarea(pTareaBorrar) {
-
-    let tareaBorrar = document.getElementById(pTareaBorrar);
-    newTarea.removeChild(tareaBorrar);
-    let id = pTareaBorrar.substring(6)
-    console.log(id);
-    borrar(id)
-}
+function capturarFiltroXTarea() {
+    let texto = filtroXTarea.value;
+    pintarTareas(buscarTarea(listaTareas, texto));
+};
 
 
-// //Evento de cambiar de tipo de tarea
+pintarTareas(listaTareas);
 
-// selecTarea.addEventListener('change', capturarPrioridadTarea);
-
-// function capturarPrioridadTarea(event) {
-//     let prioridadTarea = event.target.value;
-// }
-
-
-
-pintarTareas(tarea);

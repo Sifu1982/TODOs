@@ -23,24 +23,26 @@
                     </div>
                     <div class="col-12 col-md-4">
                         <select id="tipoTarea" class="custom-select">
-                            <option value="Diaria">Diaria</option>
-                            <option value="Mensual">Mensual</option>
-                            <option value="Urgente">Urgente</option>
+                            <option value="">Elige la prioridad</option>
+                            <option value="diaria">Diaria</option>
+                            <option value="mensual">Mensual</option>
+                            <option value="urgente">Urgente</option>
                         </select>
                     </div>
                     <div class="col-12 col-md-4">
-                        <input id="guardar" class="btn btn-success btn-block" type="submit" value="Guardar">
+                        <input id="aniadir" class="btn btn-success btn-block" type="submit" value="Añadir">
                     </div>
                 </div>
             </article>
         </section>
     </header>
     <main>
-        <section>
+        <section class="filtro">
             <article>
                 <div class="row">
                     <div class="col-12 col-md-6">
-                        <select class="custom-select">
+                        <select id="filtroPrioridad" class="custom-select">
+                            <option value="">Filtra por prioridad</option>
                             <option value="Diaria">Diaria</option>
                             <option value="Mensual">Mensual</option>
                             <option value="Urgente">Urgente</option>
@@ -48,38 +50,24 @@
                     </div>
                     <div class="col-12 col-md-6">
                         <div class="input-group mb-3">
-                            <input type="text" class="form-control" placeholder="Tarea a buscar">
+                            <input id="filtroTarea" type="text" class="form-control" placeholder="Tarea a buscar">
                         </div>
                     </div>
                 </div>
             </article>
-            <article class="row tareas">
-                <!-- <div class="col-12 col-md-10">
+        </section>
+        <section class="tareas">
+            <!-- <article class="row tareas">
+                <div class="col-12 col-md-10">
                     <p>Estudiar Javascript</p>
                 </div>
                 <div class="col-12 col-md-2">
-                    <button type="button" class="btn btn-danger">Eliminar</button>
-                </div> -->
-            </article>
-            <!-- <article class="row">
-                <div class="col-12 col-md-10">
-                    <p>Dormir</p>
-                </div>
-                <div class="col-12 col-md-2">
-                    <button type="button" class="btn btn-danger">Eliminar</button>
-                </div>
-            </article>
-            <article class="row">
-                <div class="col-12 col-md-10">
-                    <p>Salir a comer</p>
-                </div>
-                <div class="col-12 col-md-2">
-                    <button type="button" class="btn btn-danger">Eliminar</button>
+                    <button type="button" class="btn btn-danger" onclick="eliminarTarea()">Eliminar</button>
                 </div>
             </article> -->
         </section>
     </main>
-    <footer class="fixed-bottom">
+    <footer>
         <section class="col-12">
             <p>APP TODO's David</p>
         </section>
