@@ -4,29 +4,32 @@
     box-sizing: border-box;
 }
 
-body {
-    background-color: lightslategrey;
-}
-
 /*header*/
 
 header section article {
     background-color: lightgrey;
-    border: 4px solid brown;
-    padding: 10px 10px 0 10px;
-    margin: 3% 0;
+    border: 2px solid black;
+    padding: 2%;
+    margin: 1% 3% 2% 3%;
     border-radius: 10px;
+    box-shadow: 10px 10px 10px brown;
 }
 
 /* Botón guardar en mobile design*/
 
-@media(max-width: 768px) {
-    header section article div div input {
-        margin-top: 25px;
-        margin-bottom: 25px;
-    }
+@media(max-width: 767px) {
     header section article {
-        padding-right: 10px;
+        margin: 14% 3%;
+    }
+    header .input-group {
+        margin: 0 0 2% 0;
+    }
+    header .input-group input {
+        text-align: center;
+    }
+    header .custom-select {
+        margin: 0 0 2% 0;
+        text-align: center;
     }
 }
 
@@ -36,50 +39,75 @@ header section article {
 
 /* Tarea / Tarea a buscar en mobile design */
 
-@media(max-width: 768px) {
-    main section article:first-child div div.col-12 {
-        margin-bottom: 20px;
+@media(max-width: 767px) {
+    main .custom-select {
+        margin: 0 0 2% 0;
+        text-align: center;
     }
-    main section article:first-child div div:last-child.col-12 {
-        margin-bottom: 0px;
+    main .input-group input {
+        text-align: center;
     }
 }
 
 main {
-    background-color: grey;
-    padding: 5%;
-    border: 4px solid lightgreen;
+    background-color: lightgrey;
+    padding: 1%;
+    margin: 1% 3%;
+    border: 2px solid black;
     margin-bottom: 3%;
     border-radius: 10px;
+    box-shadow: 10px 10px 10px brown;
 }
 
 /*sections*/
 
 main section {
-    padding: 0 10px 0 10px;
+    padding: 0 2%;
+}
+
+@media(max-width:767px) {
+    main section {
+        padding: 0;
+    }
 }
 
 main section article {
-    margin-top: 10px;
-    padding-top: 5px;
-    padding-bottom: 3px;
+    padding: 1%;
+    margin: 1%;
     border-radius: 10px;
 }
 
 main .filtro article {
-    background-color: black;
-    border: 4px solid black;
-    padding: 10px 10px 0 10px;
-    background-color: lightgrey;
-    position: relative;
-    left: -10px;
-    margin: 40px;
-    margin-top: 15px;
-    box-shadow: 10px 20px 10px brown;
+    border: 1px solid black;
+    background-color: gray;
+    padding: 3%;
+    margin-bottom: 4%;
+    box-shadow: 5px 5px 5px black;
 }
 
-.tareas article div {
-    padding: 1%;
+@media(max-width:767px) {
+    main .filtro article {
+        margin: 0 0 4% 0;
+    }
+}
+
+main .filtro article select option:nth-child(2) {
+    background-color: greenyellow;
+}
+
+main .filtro article select option:nth-child(3) {
+    background-color: lightsteelblue;
+}
+
+main .filtro article select option:nth-child(4) {
+    background-color: tomato;
+}
+
+@media(max-width:767px) {
+    .tareas article {
+        width: 100%;
+        margin: 2% auto;
+    }
 }
 
 .tareas div:first-child {
@@ -94,6 +122,23 @@ main .filtro article {
     font-weight: 900;
 }
 
+.tareas div button {
+    position: absolute;
+    right: 10%;
+}
+
+@media(max-width:767px) {
+    .tareas article div p {
+        text-align: center;
+        margin: 2% 0;
+    }
+    .tareas article div button {
+        position: static;
+        width: 50%;
+        margin: 0 25% 2% 25%;
+    }
+}
+
 .urgente {
     background-color: tomato;
 }
@@ -106,42 +151,20 @@ main .filtro article {
     background-color: lightsteelblue;
 }
 
-/* Boton Eliminar */
-
-main section article div button.btn {
-    position: absolute;
-    right: 20px;
-    display: block;
-}
-
-/* Sombras de los botones en mobile design */
-
-@media(max-width: 768px) {
-    main section article div button.btn {
-        box-shadow: 5px 10px rgb(209, 146, 156);
-    }
-}
-
-/* Botón Eliminar en mobile design*/
-
-@media(max-width: 768px) {
-    main section article div button.btn {
-        position: relative;
-        left: 10px;
-        margin-bottom: 15px;
-    }
-}
-
 /* fin main */
 
 /* footer */
 
 footer {
+    position: fixed;
+    bottom: 0%;
+    opacity: 75%;
+    width: 100%;
     background-color: black;
     color: white;
-    padding: 10px 0 0 10px;
-    border-top: 4px solid lightgreen;
+    padding-top: 1%;
     text-align: center;
+    border-radius: 10px 10px 0 0;
 }
 
 /* fin footer */

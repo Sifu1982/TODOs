@@ -19,6 +19,9 @@ function capturarAniadir() {
         guardarTarea(listaTareas, texto, prioridad);
         pintarTareas(listaTareas);
     };
+    inputTarea.value = '';
+    inputTarea.focus();
+    selectTarea.value = '';
 };
 
 filtroXPrioridad.addEventListener('change', capturarFiltroXPrioridad);

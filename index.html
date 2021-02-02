@@ -17,7 +17,7 @@
             <article>
                 <div class="row">
                     <div class="col-12 col-md-4">
-                        <div class="input-group mb-3">
+                        <div class="input-group">
                             <input type="text" class="form-control" placeholder="Introduce una tarea" id="textoTarea">
                         </div>
                     </div>
@@ -38,20 +38,18 @@
     </header>
     <main>
         <section class="filtro">
-            <article>
-                <div class="row">
-                    <div class="col-12 col-md-6">
-                        <select id="filtroPrioridad" class="custom-select">
-                            <option value="">Filtra por prioridad</option>
-                            <option value="Diaria">Diaria</option>
-                            <option value="Mensual">Mensual</option>
-                            <option value="Urgente">Urgente</option>
-                        </select>
-                    </div>
-                    <div class="col-12 col-md-6">
-                        <div class="input-group mb-3">
-                            <input id="filtroTarea" type="text" class="form-control" placeholder="Tarea a buscar">
-                        </div>
+            <article class="row">
+                <div class="col-12 col-md-6">
+                    <select id="filtroPrioridad" class="custom-select">
+                        <option value="">Mostrar todas</option>
+                        <option value="Diaria">Mostrar diarias</option>
+                        <option value="Mensual">Mostrar mensuales</option>
+                        <option value="Urgente">Mostrar urgentes</option>
+                    </select>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="input-group">
+                        <input id="filtroTarea" type="text" class="form-control" placeholder="Buscar tarea por nombre">
                     </div>
                 </div>
             </article>
@@ -68,8 +66,9 @@
         </section>
     </main>
     <footer>
-        <section class="col-12">
-            <p>APP TODO's David</p>
+        <section class="row">
+            <p class="col-6">APP TODO's</p>
+            <p class="col-6">&copy; David Martínez Trigo</p>
         </section>
     </footer>
 
